@@ -1,0 +1,78 @@
+// Variables
+$colorPrimario: white;
+$colorSecundario: black;
+$altura: 100px;
+
+%esteticaDeportes {
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+    padding: 25px;
+}
+%oculto {
+    opacity: 0;
+    padding: 10px 0;
+}
+%ocultoHover {
+    color: $colorSecundario;
+    background-color: rgba(255,255,255, 0.7);
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+#main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    #text {
+        color: $colorPrimario;
+        text-align: center;
+        z-index: 10;
+        #row {
+            #escalada {
+                background-image: url("../images/fondo1.jpg");
+                @extend %esteticaDeportes;
+                margin-right: 2px;
+                margin-bottom: 2px;
+                #oculto1 {
+                    @extend %oculto;
+                }
+                #oculto1:hover {
+                    @extend %ocultoHover;
+                }
+            }
+            #senderismo {
+                background-image: url("../images/fondo3.jpg");
+                @extend %esteticaDeportes;
+                margin-left: 2px;
+                margin-bottom: 2px;
+                #oculto2{
+                    @extend %oculto;
+                }
+                #oculto2:hover {
+                    @extend %ocultoHover;
+                } 
+            }
+            #ciclismo {
+                background-image: url("../images/fondo2.jpg");
+                @extend %esteticaDeportes;
+                margin-top: 2px;
+                #oculto3 {
+                    @extend %oculto;
+                }
+                #oculto3:hover {
+                    @extend %ocultoHover;
+                }
+            }
+        }
+    }   
+}
+
+#espacios {
+    background-color: $colorPrimario;
+    height: $altura;
+}
+
+#titulos {
+    text-align: center;
+}
